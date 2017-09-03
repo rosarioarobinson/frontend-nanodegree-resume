@@ -57,25 +57,25 @@ var work = {
   ]
 };
 
+
 for (var i = 0; i < work.jobs.length; i ++) {
   //new element
-  $("#workExperience").append(HTMLworkStart);
+    $("#workExperience").append(HTMLworkStart);
 
-   //format data
-   var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
-   var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
-   var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
-   var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
-   var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
+     //format data
+     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
+     var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+     var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+     var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 
-   //append
-   $(".work-entry:last").append(formattedEmployer + formattedTitle);
-   $(".work-entry:last").append(formattedDates);
-   $(".work-entry:last").append(formattedLocation);
-   $(".work-entry:last").append(formattedDescription);
+     //append
+     $(".work-entry:last").append(formattedEmployer + formattedTitle);
+     $(".work-entry:last").append(formattedDates);
+     $(".work-entry:last").append(formattedLocation);
+     $(".work-entry:last").append(formattedDescription);
 
-
-}
+};
 
 var projects = {
   "projects": [
@@ -90,7 +90,7 @@ var projects = {
 
 projects.display = function() {
 
-  for (var project = 0; projects.projects[project].length; project ++) {
+  for (var project = 0; projects.projects[project]; project ++) {
     $("#projects").append(HTMLprojectStart);
 
   var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -136,7 +136,7 @@ var education = {
 };
 
 education.display = function() {
-  for (var school = 0; education.schools[school].length; school ++) {
+  for (var school = 0; education.schools[school]; school ++) {
     $("#education").append(HTMLschoolStart);
 
   var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
