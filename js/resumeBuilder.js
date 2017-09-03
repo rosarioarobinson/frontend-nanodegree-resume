@@ -90,7 +90,7 @@ var projects = {
 
 projects.display = function() {
 
-  for (var project = 0; projects.projects.length; project ++) {
+  for (var project = 0; projects.projects[project].length; project ++) {
     $("#projects").append(HTMLprojectStart);
 
   var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -136,7 +136,7 @@ var education = {
 };
 
 education.display = function() {
-  for (var school = 0; school < 6; school ++) {
+  for (var school = 0; education.schools[school].length; school ++) {
     $("#education").append(HTMLschoolStart);
 
   var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -151,7 +151,7 @@ education.display = function() {
   $(".education-entry:last").append(formattedMajor);
 
   }
-  for (var onlineCourses = 0; onlineCourses < 4; onlineCourses ++) {
+  for (var onlineCourses = 0; education.onlineCourses[onlineCourses].length; onlineCourses ++) {
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLschoolStart);
 
