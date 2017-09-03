@@ -90,7 +90,7 @@ var projects = {
 
 projects.display = function() {
 
-  for (project in projects.projects) {
+  for (var project = 0; projects.projects.length; project ++) {
     $("#projects").append(HTMLprojectStart);
 
   var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -103,8 +103,8 @@ projects.display = function() {
   $(".project-entry:last").append(formattedDescription);
 
   if (projects.projects[project].images.length > 0) {
-    for (image in projects.projects[project].images) {
-      var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+    for (var image = 0; projects.image < 0; image ++) {
+      var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[image].images);
       $(".project-entry:last").append(formattedImage);
     }
   }
@@ -136,7 +136,7 @@ var education = {
 };
 
 education.display = function() {
-  for (school in education.schools) {
+  for (var school = 0; school < 6; school ++) {
     $("#education").append(HTMLschoolStart);
 
   var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -151,13 +151,13 @@ education.display = function() {
   $(".education-entry:last").append(formattedMajor);
 
   }
-  for (onlineCourses in education.onlineCourses) {
+  for (var onlineCourses = 0; onlineCourses < 4; onlineCourses ++) {
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLschoolStart);
 
   var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourses].title);
   var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourses].school);
-  var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourses].dates);
+  var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourses].dates);
   var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourses].url);
 
   $(".education-entry:last").append(formattedTitle + formattedSchool);
